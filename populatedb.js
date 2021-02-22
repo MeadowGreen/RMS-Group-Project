@@ -11,9 +11,9 @@ if (!userArgs[0].startsWith('mongodb')) {
 }
 */
 var async = require('async')
-var incidents = require('./models/incidents')
-var persons = require('./models/persons')
-var vehicles = require('./models/vehicles')
+var incident = require('./models/incident')
+var person = require('./models/person')
+var vehicle = require('./models/vehicle')
 
 
 var mongoose = require('mongoose');
@@ -23,7 +23,7 @@ mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-var incidents = []
-var persons = []
-var vehicles = []
+var incident = []
+var person = []
+var vehicle = []
 
