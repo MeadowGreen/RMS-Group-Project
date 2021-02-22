@@ -1,13 +1,31 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const dotenv = require('dotenv');
+const result = dotenv.config();
+var compression = require('compression');
+var helmet = require('helmet');
 
 var app = express();
+
+app.use(helmet());
+
+//Set up mongoose connection
+var mongoose = require('mongoose');
+var dev_db_url = '';
+var mongoDB = process.env.URI || dev_db_url;
+mongoose.Promise = global.Promise;
+mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -17,6 +35,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(compression()); //Compress all routes
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);

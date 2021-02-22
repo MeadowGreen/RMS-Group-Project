@@ -6,11 +6,24 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "async": "^3.2.0",
+    "bootstrap": "^4.6.0",
+    "compression": "^1.7.4",
     "cookie-parser": "^1.4.5",
+    "debug": "^4.3.1",
+    "dotenv": "^8.2.0",
     "express": "~4.16.1",
     "express-generator": "^4.16.1",
+<<<<<<< HEAD
     "http-errors": "^1.8.0",
     "jade": "~1.11.0",
+=======
+    "express-validator": "^6.9.2",
+    "helmet": "^4.4.1",
+    "http-errors": "^1.8.0",
+    "luxon": "^1.26.0",
+    "mongoose": "^5.11.17",
+>>>>>>> a119e8e3753fe3fccf8425cc88159a1112781efb
     "morgan": "^1.10.0",
     "pug": "^3.0.0"
   },
