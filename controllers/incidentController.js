@@ -1,14 +1,8 @@
 var Incident = require('../models/incident');
 
 // Display list of all Incident .
-exports.incident_list = function(req, res) {
-    Incident.find()
-        .sort([['incident_name', 'ascending']])
-        .exec(function (err, list_incidents) {
-            if (err) { return next(err); }
-            //Successful, so render
-            res.render('incident_list', { title: 'Incident List', incident_list: list_incidents });
-        });
+exports.index = function(req, res) {
+    res.render('index', { title: 'Records Management System', error: err, data: results});
 };
 
 // Display detail page for a specific Incident.
