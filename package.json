@@ -14,17 +14,10 @@
     "dotenv": "^8.2.0",
     "express": "~4.16.1",
     "express-generator": "^4.16.1",
-<<<<<<< HEAD
-    "jade": "~1.11.0",
-=======
->>>>>>> 70342f62635b803e50fa0c17a5712c17b997f67d
     "express-validator": "^6.9.2",
     "helmet": "^4.4.1",
-    "mongoose": "^5.11.17",
-<<<<<<< HEAD
     "http-errors": "^1.8.0",
-=======
->>>>>>> 70342f62635b803e50fa0c17a5712c17b997f67d
+    "mongoose": "^5.11.17",
     "morgan": "^1.10.0",
     "pug": "^3.0.0"
   },
@@ -43,4 +36,3 @@
   },
   "homepage": "https://github.com/MeadowGreen/RMS-Group-Project#readme"
 }
-
