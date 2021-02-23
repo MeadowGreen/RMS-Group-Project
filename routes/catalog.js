@@ -11,28 +11,28 @@ var vehicle_controller = require('../controllers/vehicleController');
 // GET catalog home page.
 router.get('/', incident_controller.index);
 
-// GET request for creating a Book. NOTE This must come before routes that display Book (uses id).
+// GET request for creating a incident report. NOTE This must come before routes that display incident (uses id).
 router.get('/incident/create', incident_controller.incident_create_get);
 
-// POST request for creating Book.
+// POST request for creating a incident report.
 router.post('/incident/create', incident_controller.incident_create_post);
 
-// GET request to delete Book.
+// GET request to delete a incident report.
 router.get('/incident/:id/delete', incident_controller.incident_delete_get);
 
-// POST request to delete Book.
+// POST request to delete a incident report.
 router.post('/incident/:id/delete',incident_controller.incident_delete_post);
 
-// GET request to update Book.
+// GET request to update a incident report.
 router.get('/incident/:id/update', incident_controller.incident_update_get);
 
-// POST request to update Book.
+// POST request to update a incident report.
 router.post('/incident/:id/update', incident_controller.incident_update_post);
 
-// GET request for one Book.
+// GET request for one of the incident reports.
 router.get('/incident/:id', incident_controller.incident_detail);
 
-// GET request for list of all Book items.
+// GET request for list of the incident reports.
 router.get('/incidents', incident_controller.incident_list);
 
 /// AUTHOR ROUTES ///
